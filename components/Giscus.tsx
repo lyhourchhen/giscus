@@ -160,7 +160,7 @@ export default function Giscus({ onDiscussionCreateRequest, onError }: IGiscusPr
                 disabled={data.isLoadingMore}
               >
                 <span className="color-text-secondary">
-                  {t('hiddenItems', {count: data.numHidden})}
+                  {t('hiddenItems', { count: data.numHidden })}
                 </span>
                 <span className="font-semibold color-text-link">
                   {data.isLoadingMore ? t('loading') : t('loadMore')}…

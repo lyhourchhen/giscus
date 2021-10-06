@@ -124,7 +124,7 @@ export default function Comment({
               {comment.lastEditedAt ? (
                 <button
                   className="color-text-secondary gsc-comment-edited"
-                  title={t('lastEditedAt', { date: comment.lastEditedAt })}
+                  title={t('lastEditedAt', { date: formatDate(comment.lastEditedAt) })}
                 >
                   {t('edited')}
                 </button>

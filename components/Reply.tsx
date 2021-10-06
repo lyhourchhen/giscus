@@ -85,7 +85,7 @@ export default function Reply({ reply, onReplyUpdate }: IReplyProps) {
                 {reply.lastEditedAt ? (
                   <button
                     className="color-text-secondary gsc-reply-edited"
-                    title={t('lastEditedAt', {date: reply.lastEditedAt})}
+                    title={t('lastEditedAt', { date: reply.lastEditedAt })}
                   >
                     {t('edited')}
                   </button>
@@ -107,7 +107,7 @@ export default function Reply({ reply, onReplyUpdate }: IReplyProps) {
             }
           >
             <em className="color-text-secondary">
-              {reply.deletedAt ? t('thisCommentWasDeleted'):t('thisCommentWasHidden') }
+              {reply.deletedAt ? t('thisCommentWasDeleted') : t('thisCommentWasHidden')}
             </em>
           </div>
           {!hidden ? (

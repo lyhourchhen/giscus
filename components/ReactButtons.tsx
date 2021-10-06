@@ -88,7 +88,11 @@ export default function ReactButtons({
         disabled={!token}
         title={
           token
-            ? t('peopleReactedWith', { count, reaction: t(Reactions[value].name), emoji: t('emoji') })
+            ? t('peopleReactedWith', {
+                count,
+                reaction: t(Reactions[value].name),
+                emoji: t('emoji'),
+              })
             : t('youMustBeSignedInToAddReactions')
         }
         onClick={() => react(value)}

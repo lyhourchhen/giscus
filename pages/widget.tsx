@@ -2,7 +2,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ContextType, useContext, useEffect, useState } from 'react';
-import setLanguage from 'next-translate/setLanguage'
+import setLanguage from 'next-translate/setLanguage';
 import Widget from '../components/Widget';
 import { assertOrigin } from '../lib/config';
 import { ConfigContext, ThemeContext } from '../lib/context';
@@ -97,7 +97,7 @@ export default function WidgetPage({
   });
 
   useEffect(() => {
-    console.log({lang})
+    console.log({ lang });
     if (lang) {
       setLanguage(lang);
     }

@@ -26,7 +26,7 @@ export default function CommentBox({
   onSubmit,
   onDiscussionCreateRequest,
 }: CommentBoxProps) {
-  const {t} = useGiscusTranslation();
+  const { t } = useGiscusTranslation();
   const [isPreview, setIsPreview] = useState(false);
   const [input, setInput] = useState('');
   const [lastInput, setLastInput] = useState('');
@@ -158,7 +158,7 @@ export default function CommentBox({
         ) : (
           <textarea
             className="form-control input-contrast gsc-comment-box-textarea"
-            placeholder={token ? t('writeAComment'):t('signInToComment')}
+            placeholder={token ? t('writeAComment') : t('signInToComment')}
             onChange={handleTextAreaChange}
             value={input}
             disabled={!token || isSubmitting}
