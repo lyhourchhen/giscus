@@ -97,7 +97,6 @@ export default function WidgetPage({
   });
 
   useEffect(() => {
-    console.log({ lang });
     if (lang) {
       setLanguage(lang);
     }

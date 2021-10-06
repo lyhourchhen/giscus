@@ -111,15 +111,14 @@ export default function Home({
         <div className="w-full my-8 giscus" />
         <Script
           src="/client.js"
-          data-repo="typeofweb/typeofweb.com"
-          data-repo-id="MDEwOlJlcG9zaXRvcnkzODkwOTc4NjI="
-          data-category-id="DIC_kwDOFzEphs4B-pdu"
+          data-repo="giscus/giscus"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
+          data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
           data-mapping="specific"
-          data-term="React"
+          data-term="Welcome to giscus!"
           data-theme="light"
           data-reactions-enabled="1"
           data-emit-metadata="0"
-          data-lang="pl"
         />
         <a
           className="block mx-auto mb-6 w-max"
