@@ -45,4 +45,5 @@ export const useDateFormatter = () => {
 
 const dateFormatters = {
   en: new Intl.DateTimeFormat("en"),
+  pl: new Intl.DateTimeFormat("pl"),
 }
