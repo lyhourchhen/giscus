@@ -28,6 +28,7 @@ async function get(req: NextApiRequest, res: NextApiResponse<IGiscussion | IErro
     try {
       token = await getAppAccessToken(params.repo);
     } catch (error) {
+      console.error(error);
       res.status(403).json({ error: error.message });
       return;
     }
@@ -37,6 +38,7 @@ async function get(req: NextApiRequest, res: NextApiResponse<IGiscussion | IErro
 
   if ('message' in response) {
     if (response.message.includes('Bad credentials')) {
+      console.error(response);
       res.status(403).json({ error: response.message });
       return;
     }

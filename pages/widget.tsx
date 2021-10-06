@@ -2,6 +2,7 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ContextType, useContext, useEffect, useState } from 'react';
+import setLanguage from 'next-translate/setLanguage'
 import Widget from '../components/Widget';
 import { assertOrigin } from '../lib/config';
 import { ConfigContext, ThemeContext } from '../lib/context';
@@ -24,6 +25,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
   const description = (query.description as string) || '';
   const reactionsEnabled = Boolean(+query.reactionsEnabled);
   const emitMetadata = Boolean(+query.emitMetadata);
+  const lang = (query.lang as string) || null;
   const theme = ((query.theme as string) || 'light') as Theme;
   const originHost = getOriginHost(origin);
 
@@ -60,6 +62,7 @@ export async function getServerSideProps({ query, res }: GetServerSidePropsConte
       description,
       reactionsEnabled,
       emitMetadata,
+      lang,
       theme,
       originHost,
     },
@@ -78,6 +81,7 @@ export default function WidgetPage({
   description,
   reactionsEnabled,
   emitMetadata,
+  lang,
   theme,
   originHost,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
@@ -91,6 +95,13 @@ export default function WidgetPage({
     reactionsEnabled,
     emitMetadata,
   });
+
+  useEffect(() => {
+    console.log({lang})
+    if (lang) {
+      setLanguage(lang);
+    }
+  }, [lang]);
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
