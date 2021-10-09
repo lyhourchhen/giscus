@@ -43,7 +43,16 @@ export const useDateFormatter = () => {
   }, [intl]);
 }
 
+const dateFormat: Intl.DateTimeFormatOptions = {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  timeZoneName: 'short',
+};
+
 const dateFormatters = {
-  en: new Intl.DateTimeFormat("en"),
-  pl: new Intl.DateTimeFormat("pl"),
-}
+  en: new Intl.DateTimeFormat('en', dateFormat),
+  pl: new Intl.DateTimeFormat('pl', dateFormat),
+};
