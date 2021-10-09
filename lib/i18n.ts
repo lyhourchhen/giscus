@@ -33,16 +33,6 @@ export const useGiscusTranslation = () => {
   return { t: t as GiscusTranslate, lang };
 };
 
-export const useDateFormatter = () => {
-  const { lang } = useTranslation('common');
-  const intl: Intl.DateTimeFormat = dateFormatters[lang] ?? dateFormatters.en;
-
-  return useCallback((date: string | Date) => {
-    const dateObj = typeof date === 'string' ? new Date(date) : date;
-    return intl.format(dateObj);
-  }, [intl]);
-}
-
 const dateFormat: Intl.DateTimeFormatOptions = {
   day: 'numeric',
   month: 'short',
@@ -55,4 +45,14 @@ const dateFormat: Intl.DateTimeFormatOptions = {
 const dateFormatters = {
   en: new Intl.DateTimeFormat('en', dateFormat),
   pl: new Intl.DateTimeFormat('pl', dateFormat),
-};
+} as const;
+
+export const useDateFormatter = () => {
+  const { lang } = useTranslation('common');
+  const intl: Intl.DateTimeFormat = dateFormatters[lang] ?? dateFormatters.en;
+
+  return useCallback((date: string | Date) => {
+    const dateObj = typeof date === 'string' ? new Date(date) : date;
+    return intl.format(dateObj);
+  }, [intl]);
+}
