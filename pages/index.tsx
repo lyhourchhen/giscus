@@ -119,6 +119,7 @@ export default function Home({
           data-theme="light"
           data-reactions-enabled="1"
           data-emit-metadata="0"
+          data-lang="pl"
         />
         <a
           className="block mx-auto mb-6 w-max"

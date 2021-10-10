@@ -177,7 +177,7 @@ export default function Comment({
             </div>
             <div className="gsc-comment-replies-count">
               <span className="text-xs color-text-tertiary">
-                {t('replies', { count: comment.replyCount })}
+                {t('replies', { count: comment.replyCount, plus: '' })}
               </span>
             </div>
           </div>

@@ -3,6 +3,7 @@
     "0": "brak reakcji",
     "one": "{{count}} reakcja",
     "few": "{{count}} reakcje",
+    "many": "{{count}} reakcji",
     "other": "{{count}} reakcji"
   },
   "comment": "Skomentuj",
@@ -10,14 +11,16 @@
     "0": "brak komentarzy",
     "one": "{{count}} komentarz",
     "few": "{{count}} komentarze",
+    "many": "{{count}} komentarzy",
     "other": "{{count}} komentarzy"
   },
   "reply": "Odpowiedz",
   "replies": {
     "0": "brak odpowiedzi",
     "one": "{{count}} odpowiedź",
-    "few": "{{count}} odpowiedzi",
-    "other": "{{count}} odpowiedzi"
+    "few": "{{count}} odpowiedźe",
+    "many": "{{count}}{{plus}} odpowiedzi",
+    "other": "{{count}}{{plus}} odpowiedzi"
   },
   "upvotes": {
     "0": "{{count}} głosów",
@@ -62,7 +65,6 @@
   "cancel": "Anuluj",
   "signInWithGitHub": "Zaloguj się GitHubem",
   "writeAReply": "Napisz odpowiedź",
-
   "pleaseWait": "Proszę czekać",
   "pickYourReaction": "Wybierz reakcję",
   "signIn": "Zaloguj się",
@@ -76,7 +78,6 @@
   },
   "emoji": "emoji",
   "nothingToPreview": "Brak podglądu",
-
   "+1": "kciuk w górę",
   "-1": "kciuk w dół",
   "Laugh": "uśmiechnięta twarz z przymrużonymi oczami",

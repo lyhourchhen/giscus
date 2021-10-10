@@ -33,6 +33,7 @@ interface IConfigContext {
   category: string;
   reactionsEnabled: boolean;
   emitMetadata: boolean;
+  lang: string | null;
 }
 
 export const ConfigContext = createContext<IConfigContext>({
@@ -42,4 +43,5 @@ export const ConfigContext = createContext<IConfigContext>({
   category: '',
   reactionsEnabled: true,
   emitMetadata: false,
+  lang: null,
 });

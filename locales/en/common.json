@@ -14,7 +14,7 @@
   "replies": {
     "0": "{{count}} replies",
     "one": "{{count}} reply",
-    "other": "{{count}} replies{{plus}}"
+    "other": "{{count}}{{plus}} replies"
   },
   "upvotes": {
     "0": "{{count}} upvotes",
@@ -35,12 +35,12 @@
   "showPreviousReplies": {
     "0": "Show {{count}} previous replies",
     "one": "Show {{count}} previous reply",
-    "other": "Show {{count}} previous replies{{plus}}"
+    "other": "Show {{count}} previous replies"
   },
   "seePreviousRepliesOnGitHub": {
     "0": "See {{count}} previous replies on GitHub",
     "one": "See {{count}} previous reply on GitHub",
-    "other": "See {{count}} previous replies{{plus}} on GitHub"
+    "other": "See {{count}} previous replies on GitHub"
   },
   "edited": "edited",
   "thisCommentWasDeleted": "This comment was deleted.",

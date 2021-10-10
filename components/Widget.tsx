@@ -1,3 +1,4 @@
+import setLanguage from 'next-translate/setLanguage';
 import { useCallback, useContext, useEffect, useState } from 'react';
 import Giscus from '../components/Giscus';
 import { AuthContext, ConfigContext, getLoginUrl } from '../lib/context';
@@ -16,7 +17,7 @@ interface IWidgetProps {
 
 export default function Widget({ origin, session, repoId, categoryId, description }: IWidgetProps) {
   const [token, setToken] = useState('');
-  const { repo, term, number } = useContext(ConfigContext);
+  const { repo, term, number, lang } = useContext(ConfigContext);
 
   const handleDiscussionCreateRequest = async () =>
     createDiscussion(repo, {
@@ -40,6 +41,12 @@ export default function Widget({ origin, session, repoId, categoryId, descriptio
         .catch((err) => handleError(err?.message));
     }
   }, [handleError, session, token]);
+
+  useEffect(() => {
+    if (lang) {
+      setLanguage(lang);
+    }
+  }, [lang]);
 
   const ready = (!session || token) && repo && (term || number);
 

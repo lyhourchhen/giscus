@@ -2,7 +2,6 @@ import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 import Head from 'next/head';
 import Script from 'next/script';
 import { ContextType, useContext, useEffect, useState } from 'react';
-import setLanguage from 'next-translate/setLanguage';
 import Widget from '../components/Widget';
 import { assertOrigin } from '../lib/config';
 import { ConfigContext, ThemeContext } from '../lib/context';
@@ -94,13 +93,8 @@ export default function WidgetPage({
     category,
     reactionsEnabled,
     emitMetadata,
+    lang,
   });
-
-  useEffect(() => {
-    if (lang) {
-      setLanguage(lang);
-    }
-  }, [lang]);
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
